@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+## Projet 
+L'objectif ici est de créer un front sous Angular et PrimeNg qui consomme des API Rest.
+
+## Sources
+
+Pays : https://restcountries.eu/
+
+Covid : https://github.com/florianzemma/CoronavirusAPI-France
+
+RATP : https://github.com/pgrimaud/horaires-ratp-api
