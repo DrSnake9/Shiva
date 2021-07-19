@@ -22,10 +22,7 @@ export class MenuComponent implements OnInit {
             icon: 'pi pi-fw pi-plus',
            url : '/shiva/country'
           },
-          {
-            label: 'Country by Name',
-            icon: 'pi pi-fw pi-trash'
-          },
+          
          
         ]
       },
@@ -34,7 +31,7 @@ export class MenuComponent implements OnInit {
         icon: 'pi pi-fw pi-pencil',
         items: [
           {
-            label: 'List',
+            label: 'DashBoard',
             url : '/shiva/covid',
             icon: 'pi pi-fw pi-align-left'
           },
@@ -43,14 +40,7 @@ export class MenuComponent implements OnInit {
             url:'shiva/dailyCovid',   
             icon: 'pi pi-fw pi-align-right'
           },
-          {
-            label: 'Center',
-            icon: 'pi pi-fw pi-align-center'
-          },
-          {
-            label: 'Justify',
-            icon: 'pi pi-fw pi-align-justify'
-          },
+          
 
         ]
       },
@@ -74,7 +64,8 @@ export class MenuComponent implements OnInit {
       
       {
         label: 'Quit',
-        icon: 'pi pi-fw pi-power-off'
+        icon: 'pi pi-fw pi-power-off',
+        url:'shiva/home'
       }
     ];
   }

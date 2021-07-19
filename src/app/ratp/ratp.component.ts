@@ -14,6 +14,9 @@ infoTrafic :any;
 metros : Metro[]=[];
 tramways : Tramway[]=[];
 rers : Rer[]=[];
+travaux : string='travaux';
+isPrimary : boolean=false;
+isDanger : boolean=false;
 
   constructor(private ratpService : RatpService) { }
 
@@ -36,5 +39,8 @@ rers : Rer[]=[];
 
 
   }
+
+
+
 
 }

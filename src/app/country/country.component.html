@@ -6,7 +6,7 @@
         <div class="table-header">
             List of Country
             <span class="p-input-icon-left">
-                <i class="pi pi-search"></i>
+                <em class="pi pi-search"></em>
                 <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')" placeholder="Global Search" />
             </span>
         </div>
@@ -60,14 +60,19 @@
           </div>
       </th>
            
-            <th style="width: 8rem"></th>
+            
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-countries>
-        <tr class="p-selectable-row">
+        <tr class="p-selectable-row" pTooltip="{{countries.name}} 
+        {{countries.alpha2Code}} 
+        {{countries.alpha3Code}} 
+        {{countries.nativeName}} 
+        {{countries.subregion}}
+        {{countries.translations.fr}}">
             
-            <td>
-                <span class="p-column-title">{{countries.name}}</span>
+            <td> 
+                <span class="p-column-title" >{{countries.name}}</span>
                 
             </td>
             <td>
@@ -75,7 +80,7 @@
               
           </td>
             <td>
-                <span class="p-column-title"><img src="countries.flag"  width="30"></span>
+                <span class="p-column-title"><img src={{countries.flag}} width="30"></span>
                 
             </td>
             <td>

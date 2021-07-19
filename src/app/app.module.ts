@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { CovidComponent } from './covid/covid.component';
 import { DailyCovidComponent } from './covid/daily-covid/daily-covid.component';
+import { OneCountryComponent } from './country/one-country/one-country.component';
 
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
@@ -20,6 +21,8 @@ import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {ChartModule} from 'primeng/chart';
 import {CardModule} from 'primeng/card';
 import {AccordionModule} from 'primeng/accordion';
+import { TagModule } from 'primeng/tag';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import {AccordionModule} from 'primeng/accordion';
     HomeComponent,
     MenuComponent,
     CovidComponent,
-    DailyCovidComponent
+    DailyCovidComponent,
+    OneCountryComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import {AccordionModule} from 'primeng/accordion';
     ChartModule,
     CardModule,
     AccordionModule,
+    TagModule,
+    TooltipModule
     
   ],
   providers: [],
