@@ -1,0 +1,23 @@
+<p-table [value]="rers">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Ligne</th>
+            <th>Etat</th>
+            <th>Message</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rers>
+        <tr>
+            <td>{{rers.line}}</td>
+            <td>
+                
+                    <p-tag  severity="warning">
+                        {{rers.title}}
+                    </p-tag>
+                
+                
+            </td>
+            <td>{{rers.message}}</td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -15,11 +15,11 @@ export class MenuComponent implements OnInit {
     this.items = [
       {
         label: 'Countries',
-        icon: 'pi pi-fw pi-file',
+        icon: 'pi pi-fw pi-globe',
         items: [
           {
             label: 'List',
-            icon: 'pi pi-fw pi-plus',
+            icon: 'pi pi-fw pi-globe',
            url : '/shiva/country'
           },
           
@@ -49,17 +49,28 @@ export class MenuComponent implements OnInit {
         icon: 'pi pi-fw pi-user',
         items: [
           {
-            label: 'Traffic Status',
+            label: 'Traffic Metro',
             icon: 'pi pi-fw pi-user-plus',
             url:'shiva/ratp'
 
           },
           {
-            label: 'Delete',
+            label: 'Traffic Rer',
             icon: 'pi pi-fw pi-user-minus',
-
+            url:'shiva/ratp/taffic/rer'
+          },
+          {
+            label: 'Traffic Tramway',
+            icon: 'pi pi-fw pi-user-minus',
+            url:'shiva/ratp/taffic/tramway'
           }
         ]
+      },
+      
+      {
+        label: 'Weather',
+        icon: 'pi pi-fw pi-sun',
+        url:'shiva/weather'
       },
       
       {

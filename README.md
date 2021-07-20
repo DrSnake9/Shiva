@@ -36,5 +36,9 @@ L'objectif ici est de créer un front sous Angular et PrimeNg qui consomme des A
 Pays : https://restcountries.eu/
 
 Covid : https://github.com/florianzemma/CoronavirusAPI-France
+        https://corona.dnsforfamily.com/api.txt
 
 RATP : https://github.com/pgrimaud/horaires-ratp-api
+
+Weather : https://github.com/robertoduessmann/weather-api
+

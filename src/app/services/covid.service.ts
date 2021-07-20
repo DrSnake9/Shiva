@@ -23,4 +23,19 @@ public getDataFromBeagin(): Observable<any> {
     );
 }
 
+
+
+// GET Graph FRANCE
+public getFrenchGraph(): Observable<any> {
+  console.log("covid service");
+  return this.http
+    .get('https://corona.dnsforfamily.com/graph.png?c=fr', { observe: 'response' as 'body' })
+    .pipe(
+      map((res) => {
+        
+        return res;
+      })
+    );
+}
+
 }
