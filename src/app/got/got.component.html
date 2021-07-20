@@ -1,0 +1,66 @@
+<div class="p-d-flex p-jc-center p-m-2 p-p-2 main-page">
+    <div class="p-grid p-ai-center vertical-container p-jc-center">
+        <div class="p-col-12 p-md-11 p-jc-center p-m-3 p-p-3 main-content p-shadow-4">
+            <div class="p-grid p-jc-between p-p-3">
+                <h2>Some informations about Game Of Thrones</h2>
+
+            </div>
+            <button class="p-mr-5 p-mt-5" pButton (click)="showDialog()" type="button" label="Random"></button>
+  <!--          <p-dialog header="{{randomQuote.character.slug}}  {{randomQuote.character.house.name}} "
+            [(visible)]="display" [style]="{width: '50vw'}" [baseZIndex]="10000">
+
+            <label>{{randomQuote.sentence}} </label>
+        </p-dialog>-->
+            <p-table #dt1 [value]="houses" class="table" [scrollable]="true" scrollHeight="40vh" [paginator]="true"
+                [rows]="10" styleClass="p-datatable-sm p-datatable-striped" [showCurrentPageReport]="true"
+                currentPageReportTemplate="Affichage de {first} à {last} entrées sur {totalRecords}"
+                [rowsPerPageOptions]="[10, 25, 50]" [globalFilterFields]="[
+                  'name',
+                  'slug'
+                ]">
+
+                <ng-template pTemplate="caption">
+                    <div class="p-d-flex">
+                        <span class="p-input-icon-left p-ml-auto">
+                            <em class="pi pi-search"></em>
+                            <input p pInputText type="text" (input)="dt1.filterGlobal($event.target, 'contains')"
+                                placeholder="Rechercher" />
+                        </span>
+
+
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th id="name" pSortableColumn="name">
+                            Official Name
+                            <p-sortIcon field="name"></p-sortIcon>
+                        </th>
+                        <th id="slug" pSortableColumn="slug">
+                            Usage Name
+                            <p-sortIcon field="slug"></p-sortIcon>
+                        </th>
+
+
+                        <th id="actions" colspan="2" class="p-text-center table-10">Show</th>
+                        
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-houses let-ri="rowIndex" let-columns>
+                    <tr>
+                        <td>{{ houses.name }}</td>
+                        <td>{{ houses.slug }}</td>
+                        <td class="p-text-center table-5">
+                            <a href="/shiva/got/personage/"><em class="pi pi-search"></em></a>
+                          
+                        </td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+           
+
+
+        </div>
+    </div>
+</div>

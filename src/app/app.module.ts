@@ -1,9 +1,11 @@
+//Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
+//PrimeNG
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
@@ -15,8 +17,11 @@ import { CardModule } from 'primeng/card';
 import { AccordionModule } from 'primeng/accordion';
 import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
+import {DialogModule} from 'primeng/dialog';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 
+//Components
 import { RersComponent } from './ratp/rers/rers.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +34,9 @@ import { DailyCovidComponent } from './covid/daily-covid/daily-covid.component';
 import { OneCountryComponent } from './country/one-country/one-country.component';
 import { TramwayComponent } from './ratp/tramway/tramway.component';
 import { WeatherComponent } from './weather/weather.component';
+import { GotComponent } from './got/got.component';
+import { CoktailComponent } from './coktail/coktail.component';
+import { SuperHerosComponent } from './super-heros/super-heros.component';
 
 
 
@@ -44,12 +52,16 @@ import { WeatherComponent } from './weather/weather.component';
     OneCountryComponent,
     RersComponent,
     TramwayComponent,
-    WeatherComponent
+    WeatherComponent,
+    GotComponent,
+    CoktailComponent,
+    SuperHerosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ButtonModule,
     MenubarModule,
     DataViewModule,
@@ -59,7 +71,10 @@ import { WeatherComponent } from './weather/weather.component';
     CardModule,
     AccordionModule,
     TagModule,
-    TooltipModule
+    TooltipModule,
+    DialogModule,
+    ConfirmDialogModule,
+    
 
   ],
   providers: [],

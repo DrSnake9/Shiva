@@ -9,6 +9,9 @@ import { OneCountryComponent } from './country/one-country/one-country.component
 import { RersComponent } from './ratp/rers/rers.component';
 import { TramwayComponent } from './ratp/tramway/tramway.component';
 import { WeatherComponent } from './weather/weather.component';
+import { GotComponent } from './got/got.component';
+import { CoktailComponent } from './coktail/coktail.component';
+import { SuperHerosComponent } from './super-heros/super-heros.component';
 
 const routes: Routes = [
   { path: 'shiva/home', component: HomeComponent },
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: 'shiva/ratp/taffic/rer', component: RersComponent },
   { path: 'shiva/ratp/taffic/tramway', component: TramwayComponent },
   { path: 'shiva/weather', component: WeatherComponent },
+  { path: 'shiva/got', component: GotComponent },
+  { path: 'shiva/cocktails', component: CoktailComponent },
+  { path: 'shiva/super-hero', component: SuperHerosComponent },
 
 
 ];

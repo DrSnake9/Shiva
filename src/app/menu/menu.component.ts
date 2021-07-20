@@ -74,6 +74,30 @@ export class MenuComponent implements OnInit {
       },
 
       {
+        label: 'Got Quotes',
+        icon: 'pi pi-fw pi-power-off',
+        url: 'shiva/got'
+      },
+
+      {
+        label: 'Cocktails',
+        icon: 'pi pi-fw pi-power-off',
+        items: [
+          {
+            label: 'List',
+            icon: 'pi pi-fw pi-power-off',
+            url: 'shiva/cocktails'
+          },
+        ]
+      },
+
+      {
+        label: 'Super Heros',
+        icon: 'pi pi-fw pi-power-off',
+        url: 'shiva/super-hero'
+      },
+
+      {
         label: 'Quit',
         icon: 'pi pi-fw pi-power-off',
         url: 'shiva/home'
