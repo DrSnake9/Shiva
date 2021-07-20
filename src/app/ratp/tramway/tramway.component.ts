@@ -7,9 +7,9 @@ import { RatpService } from 'src/app/services/ratp.service';
   styleUrls: ['./tramway.component.css']
 })
 export class TramwayComponent implements OnInit {
-  infoTrafic :any;
-  trams : Tramway[]=[];
-  constructor(private ratpService : RatpService) { }
+  infoTrafic: any;
+  trams: Tramway[] = [];
+  constructor(private ratpService: RatpService) { }
 
   ngOnInit(): void {
 
@@ -18,8 +18,8 @@ export class TramwayComponent implements OnInit {
         if (res.status === 200) {
           this.infoTrafic = res.body.result.tramways;
           this.trams = this.infoTrafic;
-            }
-        if(res.status ===404){
+        }
+        if (res.status === 404) {
           console.log('IL Y A UN PROBLEME')
         }
       }

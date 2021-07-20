@@ -1,4 +1,4 @@
-import { Metro } from "./metro";
+import { Metro } from "./Metro";
 import { Rer } from "./Rer";
 import { Tramway } from "./Tramway";
 

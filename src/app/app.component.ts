@@ -8,13 +8,13 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   title = 'ganesh';
-  constructor(private config: PrimeNGConfig) {}
+  constructor(private config: PrimeNGConfig) { }
 
-    ngOnInit() {
-        this.config.setTranslation({
-            accept: 'Accept',
-            reject: 'Cancel',
-            //translations
-        });
-    }
+  ngOnInit() {
+    this.config.setTranslation({
+      accept: 'Accept',
+      reject: 'Cancel',
+      //translations
+    });
+  }
 }

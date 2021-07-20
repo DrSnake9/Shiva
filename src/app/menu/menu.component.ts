@@ -20,10 +20,10 @@ export class MenuComponent implements OnInit {
           {
             label: 'List',
             icon: 'pi pi-fw pi-globe',
-           url : '/shiva/country'
+            url: '/shiva/country'
           },
-          
-         
+
+
         ]
       },
       {
@@ -32,15 +32,15 @@ export class MenuComponent implements OnInit {
         items: [
           {
             label: 'DashBoard',
-            url : '/shiva/covid',
+            url: '/shiva/covid',
             icon: 'pi pi-fw pi-align-left'
           },
           {
             label: 'Daily Covid Info',
-            url:'shiva/dailyCovid',   
+            url: 'shiva/dailyCovid',
             icon: 'pi pi-fw pi-align-right'
           },
-          
+
 
         ]
       },
@@ -51,32 +51,32 @@ export class MenuComponent implements OnInit {
           {
             label: 'Traffic Metro',
             icon: 'pi pi-fw pi-user-plus',
-            url:'shiva/ratp'
+            url: 'shiva/ratp'
 
           },
           {
             label: 'Traffic Rer',
             icon: 'pi pi-fw pi-user-minus',
-            url:'shiva/ratp/taffic/rer'
+            url: 'shiva/ratp/taffic/rer'
           },
           {
             label: 'Traffic Tramway',
             icon: 'pi pi-fw pi-user-minus',
-            url:'shiva/ratp/taffic/tramway'
+            url: 'shiva/ratp/taffic/tramway'
           }
         ]
       },
-      
+
       {
         label: 'Weather',
         icon: 'pi pi-fw pi-sun',
-        url:'shiva/weather'
+        url: 'shiva/weather'
       },
-      
+
       {
         label: 'Quit',
         icon: 'pi pi-fw pi-power-off',
-        url:'shiva/home'
+        url: 'shiva/home'
       }
     ];
   }

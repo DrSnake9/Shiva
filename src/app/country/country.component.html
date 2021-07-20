@@ -1,19 +1,20 @@
-<p-table #dt [value]="countries" [(selection)]="selectedCountry" dataKey="id" styleClass="p-datatable-customers" [rowHover]="true"
-    [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" 
-    [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-    [filterDelay]="0" [globalFilterFields]="['name','country.name','representative.name','status']">
+<p-table #dt [value]="countries" [(selection)]="selectedCountry" dataKey="id" styleClass="p-datatable-customers"
+    [rowHover]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [paginator]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [filterDelay]="0"
+    [globalFilterFields]="['name','country.name','representative.name','status']">
     <ng-template pTemplate="caption">
         <div class="table-header">
             List of Country
             <span class="p-input-icon-left">
                 <em class="pi pi-search"></em>
-                <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')" placeholder="Global Search" />
+                <input pInputText type="text" (input)="dt.filterGlobal($event.target, 'contains')"
+                    placeholder="Global Search" />
             </span>
         </div>
     </ng-template>
     <ng-template pTemplate="header">
         <tr>
-            
+
             <th pSortableColumn="countries.name">
                 <div class="p-d-flex p-jc-between p-ai-center">
                     Name
@@ -22,12 +23,12 @@
                 </div>
             </th>
             <th pSortableColumn="countries.capital">
-              <div class="p-d-flex p-jc-between p-ai-center">
-                  Capital
-                  <p-sortIcon field="name"></p-sortIcon>
-                  <p-columnFilter type="text" field="name" display="menu" class="p-ml-auto"></p-columnFilter>
-              </div>
-          </th>
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Capital
+                    <p-sortIcon field="name"></p-sortIcon>
+                    <p-columnFilter type="text" field="name" display="menu" class="p-ml-auto"></p-columnFilter>
+                </div>
+            </th>
             <th pSortableColumn="country.name">
                 <div class="p-d-flex p-jc-between p-ai-center">
                     Flag
@@ -37,30 +38,30 @@
             </th>
 
             <th pSortableColumn="countries.population">
-              <div class="p-d-flex p-jc-between p-ai-center">
-                  Population
-                  <p-sortIcon field="population"></p-sortIcon>
-                  <p-columnFilter type="text" field="population" display="menu" class="p-ml-auto"></p-columnFilter>
-              </div>
-          </th>
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Population
+                    <p-sortIcon field="population"></p-sortIcon>
+                    <p-columnFilter type="text" field="population" display="menu" class="p-ml-auto"></p-columnFilter>
+                </div>
+            </th>
 
-          <th pSortableColumn="countries.region">
-            <div class="p-d-flex p-jc-between p-ai-center">
-                Region
-                <p-sortIcon field="region"></p-sortIcon>
-                <p-columnFilter type="text" field="region" display="menu" class="p-ml-auto"></p-columnFilter>
-            </div>
-        </th>
+            <th pSortableColumn="countries.region">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Region
+                    <p-sortIcon field="region"></p-sortIcon>
+                    <p-columnFilter type="text" field="region" display="menu" class="p-ml-auto"></p-columnFilter>
+                </div>
+            </th>
 
-        <th pSortableColumn="countries.languages">
-          <div class="p-d-flex p-jc-between p-ai-center">
-              Languages
-              <p-sortIcon field="languages"></p-sortIcon>
-              <p-columnFilter type="text" field="languages" display="menu" class="p-ml-auto"></p-columnFilter>
-          </div>
-      </th>
-           
-            
+            <th pSortableColumn="countries.languages">
+                <div class="p-d-flex p-jc-between p-ai-center">
+                    Languages
+                    <p-sortIcon field="languages"></p-sortIcon>
+                    <p-columnFilter type="text" field="languages" display="menu" class="p-ml-auto"></p-columnFilter>
+                </div>
+            </th>
+
+
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-countries>
@@ -70,34 +71,34 @@
         {{countries.nativeName}} 
         {{countries.subregion}}
         {{countries.translations.fr}}">
-            
-            <td> 
-                <span class="p-column-title" >{{countries.name}}</span>
-                
+
+            <td>
+                <span class="p-column-title">{{countries.name}}</span>
+
             </td>
             <td>
-              <span class="p-column-title">{{countries.capital}}</span>
-              
-          </td>
+                <span class="p-column-title">{{countries.capital}}</span>
+
+            </td>
             <td>
                 <span class="p-column-title"><img src={{countries.flag}} width="30"></span>
-                
+
             </td>
             <td>
-              <span class="p-column-title">{{countries.population}}</span>
-              
-          </td>
-          <td>
-            <span class="p-column-title">{{countries.region}}</span>
-            
-        </td>
-        <td>
-          <li *ngFor="let language of countries.languages">{{ language.name }}</li> 
-      </td>
-            
-            
-            
-            
+                <span class="p-column-title">{{countries.population}}</span>
+
+            </td>
+            <td>
+                <span class="p-column-title">{{countries.region}}</span>
+
+            </td>
+            <td>
+                <li *ngFor="let language of countries.languages">{{ language.name }}</li>
+            </td>
+
+
+
+
         </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">

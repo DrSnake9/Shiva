@@ -8,11 +8,11 @@ import { CountryService } from '../../services/country.service';
   styleUrls: ['./one-country.component.css']
 })
 export class OneCountryComponent implements OnInit {
-  country : any;
-  name : string ='';
+  country: any;
+  name: string = '';
 
 
-  constructor(private countryService : CountryService) { }
+  constructor(private countryService: CountryService) { }
 
   ngOnInit(): void {
 

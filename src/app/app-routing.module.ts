@@ -11,15 +11,15 @@ import { TramwayComponent } from './ratp/tramway/tramway.component';
 import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
-  {path: 'shiva/home', component: HomeComponent},
-  {path: 'shiva/ratp', component: RatpComponent},
-  {path: 'shiva/country', component: CountryComponent},
-  {path: 'shiva/oneCountry/{{name}}', component: OneCountryComponent},
-  {path: 'shiva/covid', component: CovidComponent},
-  {path: 'shiva/dailyCovid', component: DailyCovidComponent},
-  {path: 'shiva/ratp/taffic/rer', component: RersComponent},
-  {path: 'shiva/ratp/taffic/tramway', component: TramwayComponent},
-  {path: 'shiva/weather', component: WeatherComponent},
+  { path: 'shiva/home', component: HomeComponent },
+  { path: 'shiva/ratp', component: RatpComponent },
+  { path: 'shiva/country', component: CountryComponent },
+  { path: 'shiva/oneCountry/{{name}}', component: OneCountryComponent },
+  { path: 'shiva/covid', component: CovidComponent },
+  { path: 'shiva/dailyCovid', component: DailyCovidComponent },
+  { path: 'shiva/ratp/taffic/rer', component: RersComponent },
+  { path: 'shiva/ratp/taffic/tramway', component: TramwayComponent },
+  { path: 'shiva/weather', component: WeatherComponent },
 
 
 ];

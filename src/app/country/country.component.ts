@@ -8,11 +8,11 @@ import { Country } from '../entities/Country';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
-countries :  Country[]= [];
-country : any;
-selectedCountry : any;
-countryIdOnToggle: number=0;
-  constructor(private countryService : CountryService) { }
+  countries: Country[] = [];
+  country: any;
+  selectedCountry: any;
+  countryIdOnToggle: number = 0;
+  constructor(private countryService: CountryService) { }
 
   ngOnInit(): void {
     this.countryService.getAllCountry().subscribe(
@@ -25,8 +25,8 @@ countryIdOnToggle: number=0;
     );
 
 
-    
-    
+
+
   }
 
 

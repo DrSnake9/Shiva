@@ -11,13 +11,13 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
 
 
-// GET Weather for a city
-public getForCity(city: string): Observable<any> {
-  return this.http.get(this.apiURL +  city, {observe: 'response' as 'body'}).pipe(
-    map(res => {
-      return res;
-    })
-  )
-}
+  // GET Weather for a city
+  public getForCity(city: string): Observable<any> {
+    return this.http.get(this.apiURL + city, { observe: 'response' as 'body' }).pipe(
+      map(res => {
+        return res;
+      })
+    )
+  }
 
 }

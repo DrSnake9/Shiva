@@ -12,14 +12,14 @@ export class RatpService {
   constructor(private http: HttpClient) { }
 
   // GET Traffic Status
-public getTraficStatus(): Observable<any> {
-  return this.http
-    .get(this.apiURL + 'traffic', { observe: 'response' as 'body' })
-    .pipe(
-      map((res) => {
-        
-        return res;
-      })
-    );
-}
+  public getTraficStatus(): Observable<any> {
+    return this.http
+      .get(this.apiURL + 'traffic', { observe: 'response' as 'body' })
+      .pipe(
+        map((res) => {
+
+          return res;
+        })
+      );
+  }
 }

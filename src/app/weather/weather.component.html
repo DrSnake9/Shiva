@@ -1,3 +1,11 @@
-<p> tapez le nom de votre ville</p>
-<input type="text">
-<p-button label='Ok'></p-button>
+<div>
+    <p> tapez le nom de votre ville</p>
+    <input type="text" (ngModel)="city">
+    <p-button class="p-mr-2 p-mb-2" (click)='getWeatherByCity(city)'>OK</p-button>
+    <div *ngIf='weather'>
+        A {{city}}, il fait 
+        <label>{{weather.temperature}}, </label>
+        <label>avec un vent de {{weather.wind}}</label>
+        <label>le temps est {{weather.description}}</label>
+    </div>
+</div>

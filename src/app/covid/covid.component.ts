@@ -13,7 +13,7 @@ export class CovidComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-}
+  }
 
 
 

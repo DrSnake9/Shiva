@@ -8,10 +8,10 @@ import { Rer } from '../../entities/Rer';
   styleUrls: ['./rers.component.css']
 })
 export class RersComponent implements OnInit {
-  infoTrafic :any;
-  rers : Rer[]=[];
-  
-  constructor(private ratpService : RatpService) { }
+  infoTrafic: any;
+  rers: Rer[] = [];
+
+  constructor(private ratpService: RatpService) { }
 
   ngOnInit(): void {
 
@@ -21,7 +21,7 @@ export class RersComponent implements OnInit {
           this.infoTrafic = res.body.result;
           this.rers = this.infoTrafic.tramways;
         }
-        if(res.status ===404){
+        if (res.status === 404) {
           console.log('IL Y A UN PROBLEME')
         }
       }
