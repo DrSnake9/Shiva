@@ -6,13 +6,12 @@ import { GotService } from '../services/got.service';
   styleUrls: ['./got.component.css']
 })
 export class GotComponent implements OnInit {
-randomQuote : any;
+randomQuote : any={};
 display: boolean = false;
 houses : any;
   constructor(private gotService : GotService) { }
 
   ngOnInit(): void {
-    
   
     this.gotService.getHousesList().subscribe(
       (res) => {
@@ -32,6 +31,7 @@ houses : any;
 
 
   getRandomQuote(){
+    this.display = true;
     this.gotService.getRandomQuote().subscribe(
       (res) => {
         if (res.status === 200) {
@@ -47,9 +47,7 @@ houses : any;
 
 
   
-  showDialog() {
-    this.display = true;
-}
+ 
 
 
 

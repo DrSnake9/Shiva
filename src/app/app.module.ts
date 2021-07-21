@@ -37,6 +37,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { GotComponent } from './got/got.component';
 import { CoktailComponent } from './coktail/coktail.component';
 import { SuperHerosComponent } from './super-heros/super-heros.component';
+import { PersonageComponent } from './got/personage/personage.component';
 
 
 
@@ -55,7 +56,8 @@ import { SuperHerosComponent } from './super-heros/super-heros.component';
     WeatherComponent,
     GotComponent,
     CoktailComponent,
-    SuperHerosComponent
+    SuperHerosComponent,
+    PersonageComponent
   ],
   imports: [
     BrowserModule,

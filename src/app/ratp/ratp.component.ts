@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RatpService } from '../services/ratp.service';
 import { InfoTrafic } from '../entities/InfoTrafic';
-import { Metro } from '../entities/Metro';
+import { Transport } from '../entities/Transport';
 @Component({
   selector: 'app-ratp',
   templateUrl: './ratp.component.html',
@@ -9,7 +9,11 @@ import { Metro } from '../entities/Metro';
 })
 export class RatpComponent implements OnInit {
   infoTrafic: any;
-  metros: Metro[] = [];
+  metros: Transport[] = [];
+rers : Transport[]=[];
+tramways : Transport[]=[];
+isBuilding : boolean = false;
+transport01 : any = {};
 
 
   constructor(private ratpService: RatpService) { }
@@ -21,7 +25,8 @@ export class RatpComponent implements OnInit {
         if (res.status === 200) {
           this.infoTrafic = res.body.result;
           this.metros = this.infoTrafic.metros;
-
+          this.rers = this.infoTrafic.rers;
+          this.tramways = this.infoTrafic.tramways;
         }
         if (res.status === 404) {
           console.log('IL Y A UN PROBLEME')
@@ -33,6 +38,16 @@ export class RatpComponent implements OnInit {
 
   }
 
+
+buidingVerif(){
+  for(var item in this.tramways){
+    console.log(this.tramways);
+    console.log(item);
+  if (item == 'Traffic normal' ){
+    this.isBuilding = true;
+  }
+}
+}
 
 
 

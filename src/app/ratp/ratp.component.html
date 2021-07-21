@@ -1,36 +1,32 @@
-<!--<div>
-
-    <div>
-        <div>
-            <label>Metro</label>
-        </div>
-        <div>
-            <li *ngFor="let metro of metros">{{ metro.line }}  {{metro.title}} {{metro.message}}  </li> 
-        </div>
-    </div>
-    <div>
-        <div>
-            <label>RER</label>
-            <div>
-                <li *ngFor="let rer of rers">{{ rer.line }} {{rer.title}} {{rer.message}}</li> 
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <div>
-            <label>Tramway</label>
-            <div>
-                <li *ngFor="let tramway of tramways">{{ tramway.line }} {{tramway.title}} {{tramway.message}}</li> 
-
-            </div>
-        </div>
-    </div>
-
-
-</div>-->
-
-<p-table [value]="metros">
+<p-accordion>
+    <p-accordionTab header="Metro">
+        <p-table [value]="metros">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Ligne</th>
+                    <th>Etat</th>
+                    <th>Message</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-metros>
+                <tr>
+                    <td>{{metros.line}}</td>
+                    <td>
+        
+                        <p-tag severity="warning">
+                            {{metros.title}}
+                        </p-tag>
+        
+        
+                    </td>
+                    <td>{{metros.message}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-accordionTab>
+    <p-accordionTab header="Rer">
+        
+<p-table [value]="rers">
     <ng-template pTemplate="header">
         <tr>
             <th>Ligne</th>
@@ -38,18 +34,50 @@
             <th>Message</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-metros>
+    <ng-template pTemplate="body" let-rers>
         <tr>
-            <td>{{metros.line}}</td>
+            <td>{{rers.line}}</td>
             <td>
 
                 <p-tag severity="warning">
-                    {{metros.title}}
+                    {{rers.title}}
                 </p-tag>
 
 
             </td>
-            <td>{{metros.message}}</td>
+            <td>{{rers.message}}</td>
         </tr>
     </ng-template>
 </p-table>
+    </p-accordionTab>
+    
+    <p-accordionTab header="Tramway">
+  
+<p-table [value]="tramways">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Ligne</th>
+            <th>Etat</th>
+            <th>Message</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-tramways>
+        <tr>
+            <td>{{tramways.line}}</td>
+            <td>
+
+                <p-tag *ngIf='transport01' severity="warning">
+                    {{tramways.title}}
+                </p-tag>
+                <p-tag *ngIf='!transport01' severity="primary">
+                    {{tramways.title}}
+                </p-tag>
+
+
+            </td>
+            <td>{{tramways.message}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+    </p-accordionTab>
+</p-accordion>

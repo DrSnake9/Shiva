@@ -1,4 +1,4 @@
-export interface Metro {
+export interface Transport {
     line: string;
     slug: string;
     title: string;

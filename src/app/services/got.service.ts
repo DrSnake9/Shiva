@@ -41,4 +41,39 @@ public getHousesList(): Observable<any> {
 
   }
 
+
+
+
+
+
+  // GET List list of members of a house
+public getFamilyByName(name : string): Observable<any> {
+  return this.http
+    .get(this.apiURL + 'house/'+name, { observe: 'response' as 'body' })
+    .pipe(
+      map((res) => {
+
+        return res;
+      })
+    );
+
+  }
+
+
+
+
+// GET random quote
+public getQuoteFromPersonage(name : string): Observable<any> {
+  return this.http
+    .get(this.apiURL + 'author/'+name, { observe: 'response' as 'body' })
+    .pipe(
+      map((res) => {
+
+        return res;
+      })
+    );
+
+  }
+
+
 }

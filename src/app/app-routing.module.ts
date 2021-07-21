@@ -10,9 +10,9 @@ import { RersComponent } from './ratp/rers/rers.component';
 import { TramwayComponent } from './ratp/tramway/tramway.component';
 import { WeatherComponent } from './weather/weather.component';
 import { GotComponent } from './got/got.component';
+import { PersonageComponent } from './got/personage/personage.component';
 import { CoktailComponent } from './coktail/coktail.component';
 import { SuperHerosComponent } from './super-heros/super-heros.component';
-
 const routes: Routes = [
   { path: 'shiva/home', component: HomeComponent },
   { path: 'shiva/ratp', component: RatpComponent },
@@ -26,6 +26,7 @@ const routes: Routes = [
   { path: 'shiva/got', component: GotComponent },
   { path: 'shiva/cocktails', component: CoktailComponent },
   { path: 'shiva/super-hero', component: SuperHerosComponent },
+  { path: 'shiva/got/personage/:slug', component: PersonageComponent },
 
 
 ];
